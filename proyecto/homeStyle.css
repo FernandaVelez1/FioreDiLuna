@@ -84,11 +84,12 @@ body {
 
 .titulo-lema {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 25px;
     color: #291B2C;
     text-align: center;
     margin-bottom: 0px;
     font-style: italic;
+    background-color: #FFEBEC;
 }
 
 .imagen-promocional {
@@ -97,7 +98,7 @@ body {
     border: none;
     padding: 0;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0;
     background-color: transparent;
 }
@@ -111,8 +112,10 @@ body {
 
 /* Clase para el contenedor del video */
 .video-promocional {
-    width: 909px;
-    height: 547px;
+    /*width: 909px;
+    height: 547px;*/
+    width: 1600px;
+    height: 600px;
     border: none;
     padding: 0;
     margin: 0 auto;
