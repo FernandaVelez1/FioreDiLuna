@@ -1,0 +1,173 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-side {
+    width: 935px;
+    height: 738px;
+    background-image: url('WhatsApp\ Image\ 2025-03-18\ at\ 9.09.35\ PM.jpeg'); /* Cambia 'tu-imagen-de-fondo.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+.right-side {
+    width: 605px;
+    background-color: #F9E4E5;
+    position: relative;
+    padding: 20px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo img {
+    width: 60px;
+    height: 75px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-family: 'Ovo', serif;
+    font-weight: regular;
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.info-block {
+    text-align: center;
+    margin: 20px auto; /* Centrado horizontal */
+    background-color: #E29BA2;
+    padding: 20px;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.info-block p {
+    margin: 5px 0;
+    font-family: 'Ovo', serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info-block button {
+    margin-top: 10px;
+    padding: 8px 16px; /* Botón más pequeño */
+    background-color: #B14061;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    cursor: pointer;
+    font-family: 'Ovo', serif;
+    width: 180px; /* Ancho reducido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block button:hover {
+    background-color: #FFDFE9;
+    color: #000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-container p {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: gray;
+    font-style: italic; /* Texto en itálica */
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Ancho reducido */
+    margin: 0 auto; /* Centrado */
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px; /* Más espacio entre los inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+}
+
+form button {
+    background-color: #B14061;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Más espacio entre "¿Olvidaste tu contraseña?" y el botón */
+    font-family: 'Ovo', serif;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FFDFE9;
+    color: #000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px; /* Más espacio entre el último input y "¿Olvidaste tu contraseña?" */
+    text-align: right;
+    width: 100%; /* Ocupa el ancho del formulario */
+    color: #B14061;
+    text-decoration: none;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.forgot-password:hover {
+    color: #D395A7;
+}
