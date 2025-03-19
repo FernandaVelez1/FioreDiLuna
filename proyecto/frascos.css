@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: 'Ovo', serif;
+  
+    overflow-x: hidden; 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFEBEC;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+    font-style: bold;
+}
+
+.nav-left, .nav-right, .nav-rights {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-rights {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-left a, .nav-right a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-rights a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.logo {
+    width: 60px;
+    height: 75px;
+}
+/* Estilo para el isotipo junto al título */
+.titulo-seccion {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el isotipo y el texto */
+    justify-content: center; /* Centra el contenido */
+    gap: 10px; 
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 600;
+    font-style: italic;
+    color: #291B2C;
+    margin: 0 0 20px;
+}
+
+.isotipo-titulo {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;
+}
+.nav-center h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    font-style: bold;
+    font-family: 'Playfair Display', serif;
+}
+/* Sección "Descubre Esencias" */
+.descubre-escencias {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #FFF5F7;
+}
+
+.descubre-escencias h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 600;
+    font-style: italic;
+    color: #291B2C;
+    margin: 0 0 20px;
+}
+.escencia-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Ajusta el contenedor de las esencias */
+
+.escencia {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+   
+    margin-bottom: 20px;
+}
+/* Imágenes de las esencias */
+.escencia img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.escencia button {
+    background-color: #FFC0CB;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 15px;
+}
+
+.escencia button:hover {
+    background-color: #FFEBEC;
+}
+
+/* Sección 1: Fondo rosa */
+.descubre-escencias:nth-of-type(1) {
+    background-color: #Fff; /* Fondo rosa */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.descubre-escencias:nth-of-type(2) {
+    background-color: #FFEBEC; /* Fondo blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+.descubre-escencias:nth-of-type(3) {
+    background-color: #FFFFFF; /* Fondo blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+
+
+/* Sección 4: Igual que la sección 2 */
+.descubre-escencias:nth-of-type(4) {
+    background-color: #FFEBEC; /* Fondo blanco */
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.foot-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Ajusta este valor según sea necesario */
+}
+
+
+.isotipo {
+    width: 59.97px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.titulo-foot {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 600;
+    font-style: bold;
+    color: #FFFFFF;
+    margin: 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #8E8989;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+.footer-section ul li {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.footer-line {
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1300px;
+    
+}
+.footer-icons {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px; 
+}
+
+.footer-icons a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    margin-left: -10px; 
+    height: 30px;
+    width: 60px;
+}
+.footer-icons a:first-child {
+    margin-left: 0;
+}
+
