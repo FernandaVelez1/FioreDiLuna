@@ -13,7 +13,7 @@ body, html {
 .left-side {
     width: 935px;
     height: 738px;
-    background-image: url('WhatsApp\ Image\ 2025-03-18\ at\ 9.09.35\ PM.jpeg'); /* Cambia 'tu-imagen-de-fondo.jpg' por la ruta de tu imagen */
+    background-image: url('../imagenes/WhatsApp Image 2025-03-18 at 9.09.35 PM.jpeg');
     background-size: cover;
     background-position: center;
 }

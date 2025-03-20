@@ -114,8 +114,8 @@ body {
 .video-promocional {
     /*width: 909px;
     height: 547px;*/
-    width: 1600px;
-    height: 600px;
+    width: 100%;
+    height: 728px;
     border: none;
     padding: 0;
     margin: 0 auto;
@@ -129,7 +129,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta el video para cubrir el contenedor */
-    border-radius: 3px; /* Bordes redondeados */
+    border-radius: 0px; /* Bordes redondeados */
     pointer-events: none; /* Desactiva la interacción del usuario */
 }
 
