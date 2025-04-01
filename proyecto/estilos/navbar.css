@@ -1,0 +1,149 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    margin: 0;
+    padding-top: 62px; /* Compensar altura de navbar fixed */
+    font-family: 'Ovo', serif;
+}
+
+/* ===== NAVBAR PRINCIPAL ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFEBEC;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Contenedores de la navbar */
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Distribución equitativa del espacio */
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-center {
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-right {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Elementos de navegación */
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6b81; /* Color rosa al hover */
+}
+
+/* Iconos */
+.navbar .bi {
+    font-size: 1.25rem; /* 20px */
+    vertical-align: middle;
+}
+
+/* Logo y título */
+.logo {
+    width: 60px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.nav-center h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; /* 40px */
+    font-weight: 600;
+    margin: 0;
+    color: #291B2C;
+}
+
+/* ===== BUSCADOR ===== */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    color: #ff6b81;
+    font-family: 'Ovo', serif;
+    font-size: 1rem; /* 16px */
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 30px; /* Posición relativa al icono */
+    opacity: 0;
+}
+
+.search-input.active {
+    width: 180px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ff6b81;
+    opacity: 1;
+}
+
+.search-input:focus {
+    outline: none;
+    border-bottom: 1px solid #ff6b81;
+}
+
+#search-icon {
+    color: #000;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+#search-icon:hover {
+    color: #ff6b81;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-center h1 {
+        font-size: 1.5rem; /* Reducir tamaño en móviles */
+    }
+    
+    .logo {
+        width: 40px;
+        height: 50px;
+    }
+    
+    .navbar {
+        padding: 0 10px;
+    }
+    
+    .nav-right {
+        gap: 10px;
+    }
+    
+    .search-input.active {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-center h1 {
+        display: none; /* Ocultar texto en pantallas muy pequeñas */
+    }
+}

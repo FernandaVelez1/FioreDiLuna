@@ -1,0 +1,171 @@
+/* ===== ESTILOS COMPLETOS DEL FOOTER ===== */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 5%; /* Mayor padding lateral para centrado */
+    font-family: 'Ovo', serif;
+    position: relative;
+}
+
+/* Encabezado del footer con logo y título */
+.foot-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.foot-titulo .isotipo {
+    width: auto;
+    height: 60px; /* Altura igual al título */
+    margin-right: 20px;
+}
+
+.titulo-foot {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; /* 48px */
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 60px; /* Igual a altura del isotipo */
+}
+
+/* Contenedor principal del footer - Centrado con espacio equilibrado */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* Espacio mayor entre columnas */
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 5%; /* Espaciado lateral igual */
+}
+
+/* Secciones del footer */
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #8E8989;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+    color: #FFEBEC;
+}
+
+/* Línea divisoria - Ancho completo y blanca */
+.footer-line {
+    height: 2px; /* Más gruesa */
+    background-color: #FFFFFF; /* Blanco puro */
+    margin: 40px 0; /* Mayor espacio vertical */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: 100%; /* Sin límite de ancho */
+}
+
+/* Iconos de redes sociales - Centrados bajo la línea */
+.footer-icons {
+    display: flex;
+    justify-content: flex-end; /* Centrados horizontalmente */
+    gap: 30px; /* Más espacio entre iconos */
+    padding: 20px 0;
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 1.5rem; /* Iconos más grandes */
+    transition: all 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #FFEBEC;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* ===== VERSIÓN RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .footer-content {
+        gap: 30px;
+        padding: 0 5%;
+    }
+    
+    .titulo-foot {
+        font-size: 2.5rem; /* 40px */
+    }
+    
+    .foot-titulo .isotipo {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+    
+    .titulo-foot {
+        font-size: 2rem; /* 32px */
+        line-height: 50px;
+    }
+    
+    .foot-titulo .isotipo {
+        height: 40px;
+    }
+    
+    .footer-line {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .foot-titulo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .foot-titulo .isotipo {
+        margin-right: 0;
+        margin-bottom: 15px;
+        height: 50px;
+    }
+    
+    .titulo-foot {
+        font-size: 1.8rem; /* 28px */
+        line-height: 1.2;
+    }
+    
+    .footer-icons {
+        gap: 25px;
+    }
+}
