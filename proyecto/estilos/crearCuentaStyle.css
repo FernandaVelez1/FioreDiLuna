@@ -127,3 +127,106 @@ input {
     color: white;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
 }
+
+
+
+
+
+/* Estilos SweetAlert personalizados - Tema Rosa Elegante */
+.swal2-popup {
+    background: #fff5f7 !important;
+    border-radius: 15px !important;
+    border: 1px solid #f8c8dc !important;
+    box-shadow: 0 4px 20px rgba(210, 60, 125, 0.2) !important;
+    color: #5a2a40 !important;
+    font-family: 'Ovo', serif !important;
+}
+
+.swal2-title {
+    color: #d23c7d !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.8rem !important;
+}
+
+.swal2-confirm {
+    background-color: #d23c7d !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 8px 24px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+}
+
+.swal2-confirm:hover {
+    background-color: #b8326a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(210, 60, 125, 0.3) !important;
+}
+
+.swal2-cancel {
+    border-radius: 8px !important;
+    padding: 8px 24px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #d23c7d !important;
+    color: #d23c7d !important;
+    background: transparent !important;
+}
+
+.swal2-cancel:hover {
+    transform: translateY(-2px) !important;
+    background: #fff0f3 !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    border-color: rgba(210, 60, 125, 0.3) !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #d23c7d !important;
+}
+
+.swal2-icon.swal2-error {
+    border-color: #d23c7d !important;
+    color: #d23c7d !important;
+}
+
+.swal2-x-mark-line-left, 
+.swal2-x-mark-line-right {
+    background-color: #d23c7d !important;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.animate__fadeOutUp {
+    animation-name: fadeOutUp;
+}

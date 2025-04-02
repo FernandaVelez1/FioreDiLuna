@@ -172,3 +172,79 @@ form button:hover {
 .forgot-password:hover {
     color: #D395A7;
 }
+
+
+
+
+/* Estilos personalizados para SweetAlert */
+.swal-popup {
+    border-radius: 15px !important;
+    border: 1px solid #f8c8dc !important;
+    box-shadow: 0 4px 20px rgba(210, 60, 125, 0.2) !important;
+}
+
+.swal-title {
+    color: #d23c7d !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.8rem !important;
+}
+
+.swal-confirm-btn {
+    background-color: #d23c7d !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 8px 24px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.swal-confirm-btn:hover {
+    background-color: #b8326a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(210, 60, 125, 0.3) !important;
+}
+
+.swal-cancel-btn {
+    border-radius: 8px !important;
+    padding: 8px 24px !important;
+    transition: all 0.3s ease !important;
+}
+
+.swal-cancel-btn:hover {
+    transform: translateY(-2px) !important;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+}
+
+.animate__animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.animate__fadeOutUp {
+    animation-name: fadeOutUp;
+}

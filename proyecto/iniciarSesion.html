@@ -25,18 +25,26 @@
             <div class="info-block">
                 <p>¿No tiene cuenta?</p>
                 <p>Cree una cuenta y obtenga envío gratuito</p>
-                <a href="estilos/crearCuentaStyle.css"><button>Crear una Cuenta</button></a>
+                <a href="crearCuenta.html"><button>Crear una Cuenta</button></a>
             </div>
             <div class="form-container">
                 <p>Para acceder a su cuenta</p>
-                <form>
-                    <input type="email" placeholder="Correo" required>
-                    <input type="password" placeholder="Contraseña" required>
+                <form id="formularioLogin" method="POST" action="login.php">
+                    <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required>
                     <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                     <button type="submit">Iniciar Sesión</button>
                 </form>
             </div>
         </div>
     </div>
+    <!-- jQuery y SweetAlert2 (deben cargarse PRIMERO) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Tu archivo JS personalizado -->
+<script src="scripts/login.js"></script>
 </body>
 </html>
+
+
