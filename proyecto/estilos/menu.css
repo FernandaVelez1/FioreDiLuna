@@ -1,0 +1,171 @@
+/* Estilos para el menú desplegable - Versión Final */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 235, 236, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-container {
+    background-color: #FFF5F6;
+    width: calc(100% - 20px);
+    max-width: 400px;
+    height: calc(100% - 50px);
+    margin: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateX(-110%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-top: 3px solid #FFD1DC;
+    border-left: 3px solid #FFD1DC;
+    border-bottom: 3px solid #FFD1DC;
+    border-right: 3px solid #FFD1DC; /* Mantenemos 3px solo en el derecho */
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.menu-overlay.active {
+    display: flex;
+}
+
+.menu-overlay.active .menu-container {
+    transform: translateX(0);
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 24px; /* X más grande */
+    cursor: pointer;
+    color: #000;
+    transition: all 0.2s ease;
+    z-index: 2;
+    padding: 5px;
+}
+
+.close-menu:hover {
+    color: #B14061;
+    transform: scale(1.1);
+}
+
+.menu-header {
+    padding: 40px 0 15px; /* Reducido el espacio superior e inferior */
+    text-align: center;
+    border-bottom: 1px solid #FFD1DC;
+    margin: 0 25px 15px;
+}
+
+.menu-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 0px; /* Espacio reducido entre logo y slogan */
+}
+
+.menu-slogan {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #000;
+    margin: 0; /* Eliminado margen superior */
+    font-style: normal;
+    padding-top: 0px;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+}
+
+.menu-items li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.menu-items li::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #D8A7B1;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-items li:hover::before {
+    opacity: 1;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #B14061;
+    font-size: 17px;
+    font-family: 'Ovo', serif;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 8px 5px;
+}
+
+.menu-items a:hover {
+    color: #E29BA2;
+    transform: translateX(5px);
+}
+
+.menu-footer {
+    padding: 20px 30px;
+    margin-top: 20px;
+    border-top: 1px solid #FFD1DC;
+    text-align: center;
+}
+
+.accessibility-link {
+    font-size: 13px;
+    color: #ed7985;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Ovo', serif;
+    font-weight: 500;
+}
+
+.accessibility-link:hover {
+    color: #B14061;
+    text-decoration: underline;
+}
+
+/* Efecto de aparición escalonada para los items */
+.menu-items li {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.4s ease;
+}
+
+.menu-overlay.active .menu-items li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-overlay.active .menu-items li:nth-child(1) { transition-delay: 0.1s; }
+.menu-overlay.active .menu-items li:nth-child(2) { transition-delay: 0.15s; }
+.menu-overlay.active .menu-items li:nth-child(3) { transition-delay: 0.2s; }
+.menu-overlay.active .menu-items li:nth-child(4) { transition-delay: 0.25s; }
+.menu-overlay.active .menu-items li:nth-child(5) { transition-delay: 0.3s; }
+.menu-overlay.active .menu-items li:nth-child(6) { transition-delay: 0.35s; }
+.menu-overlay.active .menu-items li:nth-child(7) { transition-delay: 0.4s; }
+.menu-overlay.active .menu-items li:nth-child(8) { transition-delay: 0.45s; }
+.menu-overlay.active .menu-items li:nth-child(9) { transition-delay: 0.5s; }

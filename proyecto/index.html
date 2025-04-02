@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="estilos/navbar.css">
     <link rel="stylesheet" href="estilos/footer.css">
+    <link rel="stylesheet" href="estilos/menu.css">
 
     <link rel="icon" type="image/png" href="imagenes/isotipo.png">
 
@@ -17,8 +18,11 @@
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <div class="nav-left">
+         <!-- <div class="nav-left">
             <a href="#"><i class="bi bi-list"></i></a>
+        </div> -->
+        <div class="nav-left">
+            <a href="#" id="menu-toggle"><i class="bi bi-list"></i></a>
         </div>
         <div class="nav-center">
             <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo">
@@ -42,6 +46,31 @@
             </div>
         </div> -->
     </nav>
+
+    <!-- Menú desplegable -->
+<div class="menu-overlay" id="menu-overlay">
+    <div class="menu-container">
+        <button class="close-menu" id="close-menu">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="menu-header">
+            <img src="imagenes/isotipo.png" alt="Fiore di Luna" class="menu-logo">
+            <p class="menu-slogan">FIORE DI LUNA</p>
+        </div>
+        <ul class="menu-items">
+            <li><a href="crea-tu-perfume.html">Crea tu perfume</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="escencias.html">Escencias</a></li>
+            <li><a href="envases.html">Envases</a></li>
+            <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
+            <li><a href="el-arte-de-regalar.html">El arte de regalar</a></li>
+            <li><a href="nuestros-compromisos.html">Nuestros compromisos</a></li>
+        </ul>
+        <div class="menu-footer">
+            <a href="#" class="accessibility-link">Donde la Luna y tu Esencia se Encuentran</a>
+        </div>
+    </div>
+</div>
 
     <!-- Header -->
     <section class="header">

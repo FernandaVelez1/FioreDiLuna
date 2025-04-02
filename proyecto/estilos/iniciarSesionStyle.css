@@ -23,6 +23,7 @@ body, html {
     background-color: #F9E4E5;
     position: relative;
     padding: 20px;
+    height: auto;
 }
 
 .close-icon {
