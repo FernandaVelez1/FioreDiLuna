@@ -16,21 +16,48 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="nav-left">
-
-            <a href="#"><i class="bi bi-list"></i></a>
+            <a href="#" id="menu-toggle"><i class="bi bi-list"></i></a>
         </div>
         <div class="nav-center">
             <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo">
             <h1>FIORE DI LUNA</h1>
         </div>
         <div class="nav-right">
-            <a href="#"><i class="bi bi-search"></i></a>
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+                <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+            </div>
             <a href="#"><i class="bi bi-handbag"></i></a>
             <div class="nav-rights">
-                <a href="#"><i class="bi bi-person"></i></a>
+                <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
             </div>
-        </div>
+        </div> 
     </nav>
+ 
+    <!-- Menú desplegable -->
+    <div class="menu-overlay" id="menu-overlay">
+     <div class="menu-container">
+         <button class="close-menu" id="close-menu">
+             <i class="bi bi-x"></i>
+         </button>
+         <div class="menu-header">
+             <img src="imagenes/isotipo.png" alt="Fiore di Luna" class="menu-logo">
+             <p class="menu-slogan">FIORE DI LUNA</p>
+         </div>
+         <ul class="menu-items">
+             <li><a href="index.html">Inicio</a></li>
+             <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+             <li><a href="proceso.html">Crea tu perfume</a></li>
+             <li><a href="fragancias.html">Escencias</a></li>
+             <li><a href="frascos.html">Envases</a></li>
+             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
+         </ul>
+         <div class="menu-footer">
+             <a href="#" class="accessibility-link">Donde la Luna y tu Esencia se Encuentran</a>
+         </div>
+     </div>
+ </div>
+
     <section class="descubre-escencias">
         <h2>
             Envases de 50mL

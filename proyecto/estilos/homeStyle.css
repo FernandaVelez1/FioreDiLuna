@@ -120,6 +120,18 @@ body {
     border-radius: 3px;
 }
 
+/* ===== ANIMACION ===== */
+
+.crea-tu-perfume .paso {
+    transition: transform 0.5s ease;
+}
+
+.crea-tu-perfume .paso:hover {
+    transform: translateY(-7px);
+}
+
+/* ===== ANIMACION ===== */
+
 .parrafo-section {
     font-family: 'Ovo', serif;
     font-size: 25px;
@@ -160,6 +172,14 @@ body {
     border-radius: 3px;
 }
 
+.escencia-container .escencia {
+    transition: transform 0.5s ease;
+}
+
+.escencia-container .escencia:hover {
+    transform: translateY(-7px);
+}
+
 .escencia p {
     margin-top: 10px;
     font-family: 'Ovo', serif;
@@ -190,6 +210,14 @@ body {
 
 .envase {
     text-align: center;
+}
+
+.envase-container .envase {
+    transition: transform 0.5s ease;
+}
+
+.envase-container .envase:hover {
+    transform: translateY(-7px);
 }
 
 .envase img {
@@ -223,6 +251,14 @@ body {
 
 .vive {
     text-align: center;
+}
+
+.vive-container .vive {
+    transition: transform 0.5s ease;
+}
+
+.vive-container .vive:hover {
+    transform: translateY(-7px);
 }
 
 .vive img {
