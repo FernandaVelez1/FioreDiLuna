@@ -54,7 +54,7 @@ $(document).ready(function() {
                                 color: '#5a2a40',
                                 iconColor: '#d23c7d',
                                 willClose: () => {
-                                    window.location.href = "index.html"; // Redirigir a la página de inicio
+                                    window.location.href = "index.php"; // Redirigir a la página de inicio
                                 }
                             });
                         } else if (respuesta === "inactivo") {

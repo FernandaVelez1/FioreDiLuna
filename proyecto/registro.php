@@ -20,6 +20,6 @@ if (mysqli_query($conexion, $insertar)) {
     echo "Hubo un error: " . mysqli_error($conexion);
 }
 
-// Cerrar conexión
+
 
 ?>

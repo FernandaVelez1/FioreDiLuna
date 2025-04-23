@@ -1,3 +1,8 @@
+<?php
+session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,18 +40,21 @@
             </div>
             <a href="#"><i class="bi bi-handbag"></i></a>
             <div class="nav-rights">
-                <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+    <?php if (isset($_SESSION['user_name'])): ?>
+        <div class="user-dropdown">
+            <a href="#" class="user-name">
+                <?= strtoupper(substr($_SESSION['user_name'], 0, 1)) ?>
+            </a>
+            <div class="dropdown-content">
+                <a href="logout.php">Cerrar sesión</a>
             </div>
-        </div> <!--
-        <div class="nav-right">
-            <a href="#"><i class="bi bi-search"></i></a>
-            <a href="#"><i class="bi bi-handbag"></i></a>
-            <div class="nav-rights">
-                <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
-            </div>
-        </div> -->
+        </div>
+    <?php else: ?>
+        <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+    <?php endif; ?>
+</div>
+        </div> 
     </nav>
-
    <!-- Menú desplegable -->
    <div class="menu-overlay" id="menu-overlay">
     <div class="menu-container">
@@ -58,7 +66,7 @@
             <p class="menu-slogan">FIORE DI LUNA</p>
         </div>
         <ul class="menu-items">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
             <li><a href="proceso.html">Crea tu perfume</a></li>
             <li><a href="fragancias.html">Escencias</a></li>
@@ -258,6 +266,5 @@
 
     <script src="scripts/menu.js"></script>
     <script src="scripts/search.js"></script>
-
 </body>
 </html>

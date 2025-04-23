@@ -166,7 +166,7 @@
                                     timer: 3000,
                                     timerProgressBar: true,
                                     willClose: () => {
-                                        window.location.href = "iniciarSesion.html";
+                                        window.location.href = "index.php";
                                     }
                                 });
                             } else {
