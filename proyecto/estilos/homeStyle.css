@@ -98,6 +98,7 @@ body {
     color: #291B2C;
     margin: 0;
 }
+/*  NO SE */
 
 .pasos-container {
     display: flex;
@@ -109,7 +110,9 @@ body {
 }
 
 .paso {
-    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+    height: 100%;
 }
 
 .paso img {
@@ -118,6 +121,29 @@ body {
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 3px;
+}
+
+.paso-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.paso-link:hover .paso {
+    transform: translateY(-7px);
+}
+
+.paso-link:hover .parrafo-section {
+    color: #3d2730; /* Un tono ligeramente más oscuro */
+    transition: color 0.3s ease;
+}
+
+.paso-link .parrafo-section {
+    font-family: 'Ovo', serif;
+    font-size: 25px;
+    color: #291B2C;
+    margin: 0;
+    text-decoration: none !important; /* Aseguramos que nunca tenga subrayado */
 }
 
 /* ===== ANIMACION ===== */
@@ -162,7 +188,9 @@ body {
 }
 
 .escencia {
-    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+    height: 100%;
 }
 
 .escencia img {
@@ -185,6 +213,29 @@ body {
     font-family: 'Ovo', serif;
     font-size: 18px;
     color: #291B2C;
+}
+
+.escencia-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.escencia-link:hover .escencia {
+    transform: translateY(-7px);
+}
+
+.escencia-link .parrafo-section {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #291B2C;
+    margin: 10px 0 0 0;
+    text-decoration: none !important;
+}
+
+.escencia-link:hover .parrafo-section {
+    color: #3d2730;
+    transition: color 0.3s ease;
 }
 
 /* ===== SECCIÓN ENVASES ===== */
