@@ -10,7 +10,7 @@ body {
     text-align: center;
     background-color: #FFFFFF;
     padding: 0px 0px;
-    height: 728px;
+    height: 680px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +22,14 @@ body {
     font-size: 50px;
     color: #291B2C;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-style: italic;
     margin-top: -90px;
 }
 
 .imagen-promocional {
     width: 909px;
-    height: 547px;
+    height: 510px;
     border: none;
     padding: 0;
     margin: 0 auto;
@@ -60,7 +60,7 @@ body {
 
 .titulo-seccion {
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     font-style: italic;
     color: #291B2C;
@@ -73,15 +73,18 @@ body {
     text-align: center;
     margin-top: -40px;
     background-color: rgba(255, 235, 236, 0.5);
+    height: auto;
 }
 
 .aromas-container {
     display: flex;
     max-width: 1200px;
+    height: auto;
     margin: 0 auto;
+    margin-top: 20px;
     gap: 40px;
     justify-content: center;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .aromas-form {
@@ -187,11 +190,23 @@ body {
     border-color: #B14061;
 }
 
-.precio-container {
-    margin-top: 30px;
+/* Contenedor para precio y botón agregar */
+.precio-agregar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
     padding-top: 20px;
     border-top: 1px dashed #e0c1d2;
 }
+
+/* Ajuste para el precio-container */
+.precio-container {
+    margin: 0; /* Eliminamos el margen superior que tenía antes */
+}
+
+/* Ajuste para el botón agregar */
+
 
 .precio-valor {
     font-family: 'Playfair Display', serif;
@@ -202,11 +217,12 @@ body {
 
 .agregar-btn {
     margin-top: 30px;
-    padding: 12px 25px;
-    background-color: #FFDFE9;
-    border: 1px solid #FFDFE9;
+    padding: 10px 20px;
+    height: fit-content;
+    background-color: #B14061;
+    border: 1px solid #B14061;
     border-radius: 4px;
-    color: #5a3a4e;
+    color: white;
     font-family: 'Ovo', serif;
     font-size: 16px;
     cursor: pointer;
@@ -214,8 +230,9 @@ body {
 }
 
 .agregar-btn:hover {
-    background-color: #B14061;
-    color: white;
+    background-color: #FFDFE9;
+    border: 1px solid #FFDFE9;
+    color: #5a3a4e;
 }
 
 /* Contenedor para notas y botón siguiente */
@@ -233,7 +250,7 @@ body {
     flex: 1;
     padding: 20px;
     text-align: left;
-    margin-top: 0px; /* Eliminamos el margen negativo */
+    margin-top: 20px; /* Eliminamos el margen negativo */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra verticalmente el contenido */
@@ -262,10 +279,10 @@ body {
 /* Estilos para el botón siguiente */
 .siguiente-btn {
     padding: 15px 30px;
-    background-color: #FFDFE9;
+    background-color: #B14061;
     border: none;
     border-radius: 4px;
-    color: #5a3a4e;
+    color: #FFFFFF;
     font-family: 'Ovo', serif;
     font-size: 15px;
     cursor: pointer;
@@ -274,18 +291,19 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 60px; /* Misma altura que el área de notas */
-    margin-top: 0; /* Eliminamos el margen superior */
+    height: 50px; /* Misma altura que el área de notas */
+    width: 170px;
+    margin-top: 15px; /* Eliminamos el margen superior */
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 .siguiente-btn:hover {
-    background-color: #B14061;
-    color: #FFFFFF;
+    background-color: #FFDFE9;
+    color: #5a3a4e;
 }
 
 .siguiente-btn i {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /* Estilos responsivos */
@@ -313,4 +331,23 @@ body {
         height: auto;
         padding: 15px;
     }
+}
+
+/* Estilos para las notas de detalles */
+.detalle-linea {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.detalle-etiqueta {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    color: #5a3a4e;
+}
+
+.notas-texto strong {
+    color: #B14061;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proceso - Fiore Di Luna</title>
-    <link rel="stylesheet" href="estilos/procesoStyle.css">
+    <title>Creación - Fiore Di Luna</title>
+    <link rel="stylesheet" href="estilos/creacion.css">
 
     <link rel="stylesheet" href="estilos/navbar.css">
     <link rel="stylesheet" href="estilos/footer.css">
@@ -70,9 +70,10 @@
     <!--  -->
 </section>
 
+<!-- Elegir Aromas -->
 <section class="elige-aromas">
     <div class="contenedor-titulo">
-        <!--  <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">  -->
+        <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
         <h1 class="titulo-seccion">Elige tus Aromas</h1>
     </div>  
     <div class="aromas-container">
@@ -108,7 +109,7 @@
             <div class="precio-agregar-container">
                 <div class="precio-container">
                     <label class="precio-label">Precio:</label>
-                    <span class="precio-valor">$ 1.620.00 Mex</span>
+                    <span class="precio-valor">$ 1,620.00 MXN</span>
                 </div>
                 <button class="agregar-btn">+ Añadir otro aroma</button>
             </div>
@@ -119,15 +120,102 @@
         </div>
     </div>
     
-    <div class="notas-action-container">
-        <div class="notas-container">
-            <!-- <h3>Detalles de tu creación</h3> -->
-            <div class="notas-texto" id="notas-texto">
-                <!-- Aquí se agregará texto dinámicamente con JS -->
-            </div>
-        </div>
+    <div class="boton-siguiente-container">
         <button class="siguiente-btn">Siguiente paso <i class="bi bi-arrow-right"></i></button>
     </div>
+</section>
+
+<!-- PERSONALIZA ENVASE -->
+<section class="personaliza-envase">
+    <div class="contenedor-titulo">
+        <h1 class="titulo-seccion">Personaliza tu Envase</h1>
+        <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
+    </div>
+    
+    <div class="envase-container">
+        <div class="envase-imagen">
+            <img src="imagenes/p1.png" alt="Frasco Incanto di Rosa">
+        </div>
+        
+        <div class="envase-form">
+            <div class="envase-seleccion">
+                <label class="envase-label">Envase:</label>
+                <select class="envase-select">
+                    <option>Frasco Incanto di Rosa</option>
+                    <option>Frasco Luna Brillante</option>
+                    <option>Frasco Notte Stellata</option>
+                    <option>Frasco Eleganza</option>
+                </select>
+            </div>
+            
+            <div class="color-container">
+                <label class="color-label">Color:</label>
+                <div class="colores-opciones">
+                    <div class="color-circulo" style="background-color: #FFB6C1;" data-color="#FFB6C1"></div>
+                    <div class="color-circulo" style="background-color: #FF69B4;" data-color="#FF69B4"></div>
+                    <div class="color-circulo" style="background-color: #DB7093;" data-color="#DB7093"></div>
+                </div>
+            </div>
+            
+            <div class="frase-container">
+                <label class="frase-label">Frase Personalizada:</label>
+                <p class="frase-nota">Escribe una frase especial que aparecerá grabada en tu envase. Por ejemplo: "Tu esencia, tu historia".</p>
+                <input type="text" class="frase-input" placeholder="Escribe tu frase aquí" maxlength="10">
+                <p class="frase-limite">Máximo 10 caracteres</p>
+            </div>
+            
+            <div class="precio-listo-container">
+                <div class="precio-container">
+                    <label class="precio-label">Precio:</label>
+                    <span class="precio-valor">$3,200.00 MXN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="botones-navegacion">
+        <button class="regresar-btn"><i class="bi bi-arrow-left"></i> Regresar</button>
+        <button class="finalizar-btn">Tu Obra Maestra <i class="bi bi-arrow-right"></i></button>
+    </div>
+</section>
+
+<!-- Sección de Resumen del Perfume -->
+<section class="resumen-perfume">
+    <div class="contenedor-titulo">
+        <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
+        <h1 class="titulo-seccion">Recibe tu Obra Maestra</h1>
+    </div>
+    
+    <div class="resumen-container">
+        <div class="resumen-content">
+            <div class="resumen-mensaje">
+                <h2>¡Felicidades! Has creado un perfume único!</h2>
+                
+                <div class="resumen-details">
+                    <p><strong>Aromas seleccionadas:</strong> Cítricas, florales y amaderadas.</p>
+                    <p><strong>Envase:</strong> Rosa con tapón dorado</p>
+                    <p><strong>Frase:</strong> 'Tu esencia, tu historia'.</p>
+                </div>
+                
+                <div class="resumen-divider"></div>
+                
+                <div class="resumen-total">
+                    <p class="total-label"><strong>Total:</strong></p>
+                    <p class="total-price">$ 1.620.00 Mex</p>
+                </div>
+                
+                <div class="resumen-buttons">
+                    <button class="editar-btn">Volver a Editar</button>
+                    <button class="comprar-btn">Comprar Ahora</button>
+                </div>
+            </div>
+            
+            <div class="resumen-imagen">
+                <img src="imagenes/WhatsApp Image 2025-02-16 at 2.13.58 PM.jpeg" alt="Perfume personalizado">
+            </div>
+        </div>
+    </div>
+    <p class="resumen-footer">Tu perfume personalizado está listo para ser tuyo</p>
 </section>
 
     <footer>
@@ -185,7 +273,7 @@
 
     <script src="scripts/menu.js"></script>
     <script src="scripts/search.js"></script>
-    <script src="scripts/proceso.js"></script>
+    <script src="scripts/creacion.js"></script>
 
 </body>
 </html>

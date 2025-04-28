@@ -1,0 +1,742 @@
+/* ===== ESTILOS BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Ovo', serif;
+}
+
+/* ===== SECCIONES PRINCIPALES ===== */
+.header {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0px 0px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-lema {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #291B2C;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-top: -90px;
+}
+
+.imagen-promocional {
+    width: 909px;
+    height: 510px;
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.imagen-promocional img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.contenedor-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.isotipo {
+    width: 59.97px;
+    height: 75px;
+    margin-right: 0px;
+}
+
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 600;
+    font-style: italic;
+    color: #291B2C;
+    margin: 0;
+}
+
+/* Estilos para la sección de Elige tus Aromas */
+.elige-aromas {
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: -40px;
+    background-color: rgba(255, 235, 236, 0.5);
+    height: auto;
+}
+
+.aromas-container {
+    display: flex;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 40px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.aromas-form {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.aromas-imagen {
+    flex: 1;
+    max-width: 500px;
+    background-color: #f8e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.aromas-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para los elementos del formulario */
+.esencia-label, .contenido-label, .intensidad-label, .precio-label {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #291B2C;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+.esencia-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0c1d2;
+    border-radius: 4px;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    color: #5a3a4e;
+    background-color: #fdf5f9;
+    margin-bottom: 20px;
+}
+
+.contenido-opciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.contenido-btn {
+    padding: 10px 15px;
+    background-color: #fdf5f9;
+    border: 1px solid #e0c1d2;
+    border-radius: 4px;
+    font-family: 'Ovo', serif;
+    color: #5a3a4e;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.contenido-btn:hover {
+    background-color: #FFDFE9;
+}
+
+.contenido-btn.active {
+    background-color: #B14061;
+    color: white;
+    border-color: #B14061;
+}
+
+.intensidad-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.intensidad-cuadro {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0c1d2;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #fdf5f9;
+}
+
+.intensidad-cuadro:hover {
+    background-color: #FFDFE9;
+}
+
+.intensidad-cuadro.active {
+    background-color: #B14061;
+    border-color: #B14061;
+}
+
+.precio-agregar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0c1d2;
+}
+
+.precio-container {
+    margin: 0;
+}
+
+.precio-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #5a3a4e;
+    margin-left: 10px;
+}
+
+.agregar-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    height: fit-content;
+    background-color: #B14061;
+    border: 1px solid #B14061;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.agregar-btn:hover {
+    background-color: #FFDFE9;
+    border: 1px solid #FFDFE9;
+    color: #5a3a4e;
+}
+
+/* Nuevo contenedor para el botón siguiente */
+.boton-siguiente-container {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    padding-right: 20px; /* Añade un poco de espacio al lado derecho */
+}
+
+/* Estilos para el botón siguiente */
+.siguiente-btn {
+    padding: 15px 30px;
+    background-color: #B14061;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 40px;
+    width: 170px;
+    white-space: nowrap;
+    margin-right: 75px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.siguiente-btn:hover {
+    background-color: #FFDFE9;
+    color: #5a3a4e;
+}
+
+.siguiente-btn i {
+    font-size: 20px;
+}
+
+/* Estilos para el botón siguiente */
+.finalizar-btn {
+    padding: 15px 30px;
+    background-color: #B14061;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 40px;
+    width: 170px;
+    white-space: nowrap;
+    margin-right: 75px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.finalizar-btn:hover {
+    background-color: #FFDFE9;
+    color: #5a3a4e;
+}
+
+.finalizar-btn i {
+    font-size: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .aromas-container {
+        flex-direction: column;
+    }
+    
+    .aromas-form, .aromas-imagen {
+        max-width: 100%;
+    }
+    
+    .boton-siguiente-container {
+        justify-content: center; /* Centra el botón en móvil */
+        padding-right: 0;
+    }
+    
+    .siguiente-btn, .finalizar-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Estilos para el botón regresar */
+.regresar-btn {
+    background-color: #B14061 !important;
+    color: white !important;
+    border: 1px solid #B14061 !important;
+    margin-right: 700px !important;
+    width: 150px;
+    margin-top: -20px;
+}
+
+.regresar-btn:hover {
+    background-color: #FFDFE9 !important;
+    border: 1px solid #FFDFE9 !important;
+    color: #5a3a4e !important;
+}
+
+/* Ajuste para el contenedor de botones */
+.boton-siguiente-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* DESDE AQUIIIIIIII */
+/* Transición para el cambio de sección */
+.elige-aromas, .personaliza-envase {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Ocultar inicialmente la sección de envase */
+.personaliza-envase {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 235, 236, 0.5);
+    height: auto;
+}
+
+/* Estilos para el contenedor de envase */
+.envase-container {
+    display: flex;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    gap: 40px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.envase-imagen {
+    flex: 1;
+    max-width: 500px;
+    background-color: #f8e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.envase-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.envase-form {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    margin-top: 0px;
+}
+
+/* Estilos para los elementos del formulario de envase */
+.envase-label, .color-label, .frase-label, .precio-label {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #291B2C;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    display: block;
+}
+
+.envase-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0c1d2;
+    border-radius: 4px;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    color: #5a3a4e;
+    background-color: #fdf5f9;
+    margin-bottom: 20px;
+}
+
+.colores-opciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.color-circulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.color-circulo:hover {
+    border-color: #fdf5f9;
+}
+
+/* Estilo para el círculo de color seleccionado */
+.color-circulo.selected {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.frase-nota {
+    font-family: 'Ovo', serif;
+    font-size: 12px;
+    color: #5a3a4e;
+    margin-bottom: 10px;
+    margin-top: -7px;
+    font-style: italic;
+}
+
+.frase-input {
+    width: 94.5%;
+    padding: 12px;
+    border: 1px solid #e0c1d2;
+    border-radius: 4px;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    color: #5a3a4e;
+    background-color: #fdf5f9;
+    margin-bottom: 5px;
+}
+
+.frase-limite {
+    font-family: 'Ovo', serif;
+    font-size: 12px;
+    color: #B14061;
+    margin-bottom: -10px;
+    margin-top: 0px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.precio-listo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0c1d2;
+}
+
+.botones-navegacion {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.regresar-btn {
+    padding: 15px 30px;
+    background-color: #B14061;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 40px;
+    width: 150px;
+    white-space: nowrap;
+}
+
+.regresar-btn:hover {
+    background-color: #FFDFE9;
+    color: #5a3a4e;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .envase-container {
+        flex-direction: column;
+    }
+    
+    .envase-form, .envase-imagen {
+        max-width: 100%;
+    }
+    
+    .botones-navegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Estilos para la notificación */
+.notificacion-carrito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #B14061;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Ovo', serif;
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
+    width: 330px;
+}
+
+.notificacion-carrito.mostrar {
+    transform: translateX(0);
+}
+
+.notificacion-carrito i {
+    font-size: 20px;
+}
+
+/*OTROOOOOO*/
+/* Estilos para la sección de Resumen del Perfume */
+.resumen-perfume {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 235, 236, 0.5);
+    height: auto;
+    margin-top: -40px;
+}
+
+.resumen-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.resumen-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen-mensaje {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    background-color: #fdf5f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(177, 64, 97, 0.1);
+}
+
+.resumen-mensaje h2 {
+    font-family: 'Ovo', serif;
+    font-size: 28px;
+    color: #291B2C;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.resumen-details {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.resumen-details p {
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    color: #5a3a4e;
+    margin: 10px 0;
+}
+
+.resumen-divider {
+    height: 1px;
+    background-color: #e0c1d2;
+    margin: 25px 0;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.total-label {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #291B2C;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.total-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #B14061;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.resumen-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 0px;
+}
+
+.editar-btn, .comprar-btn {
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+}
+
+.editar-btn {
+    background-color: #fdf5f9;
+    border: 1px solid #B14061;
+    color: #B14061;
+    width: 30px;
+}
+
+.editar-btn:hover {
+    background-color: #FFDFE9;
+}
+
+.comprar-btn {
+    background-color: #B14061;
+    border: 1px solid #B14061;
+    color: white;
+}
+
+.comprar-btn:hover {
+    background-color: #FFDFE9;
+    color: #5a3a4e;
+}
+
+.resumen-footer {
+    font-family: 'Ovo', serif;
+    font-size: 20px;
+    color: #5a3a4e;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.resumen-imagen {
+    flex: 1;
+    max-width: 500px;
+    background-color: #f8e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 392px;
+}
+
+.resumen-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .resumen-content {
+        flex-direction: column;
+    }
+    
+    .resumen-mensaje, .resumen-imagen {
+        max-width: 100%;
+    }
+    
+    .resumen-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Añadir resumen-perfume a las transiciones */
+.elige-aromas, .personaliza-envase, .resumen-perfume {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Ocultar inicialmente la sección de resumen */
+.resumen-perfume {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
