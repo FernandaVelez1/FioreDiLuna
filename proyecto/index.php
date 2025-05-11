@@ -68,8 +68,8 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
             <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-            <li><a href="proceso.html">Crea tu perfume</a></li>
-            <li><a href="fragancias.html">Escencias</a></li>
+            <li><a href="creacion.html">Crea tu perfume</a></li>
+            <li><a href="fragancias.php">Escencias</a></li>
             <li><a href="frascos.html">Envases</a></li>
             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
         </ul>
@@ -96,19 +96,19 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         <h1 class="titulo-seccion">Crea tu Perfume en 3 Simples Pasos</h1>
     </div>
     <div class="pasos-container">
-        <a href="proceso.html" class="paso-link">
+        <a href="creacion.html" class="paso-link">
             <div class="paso">
                 <img src="imagenes/WhatsApp Image 2025-02-16 at 7.55.30 PM.jpeg" alt="Paso 1">
                 <p class="parrafo-section">Elige tus Aromas</p>
             </div>
         </a>
-        <a href="proceso.html" class="paso-link">
+        <a href="creacion.html" class="paso-link">
             <div class="paso">
                 <img src="imagenes/chica castaña esta de espaldas, esta viendo una pared con 10 diseños de perfumes, estos perfumes tienen el nombre de Fiore Di Luna, trata de decidir cual envase elegir.jpg" alt="Paso 2">
                 <p class="parrafo-section">Personaliza tu Envase</p>
             </div>
         </a>
-        <a href="proceso.html" class="paso-link">
+        <a href="creacion.html" class="paso-link">
             <div class="paso">
                 <img src="imagenes/21.jpg" alt="Paso 3">
                 <p class="parrafo-section">Recibe tu Obra Maestra</p>
