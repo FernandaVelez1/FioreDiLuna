@@ -567,10 +567,9 @@ body {
     font-size: 20px;
 }
 
-/*OTROOOOOO*/
-/* Estilos para la sección de Resumen del Perfume */
+/* ESTILOS MODIFICADOS PARA LA SECCIÓN RESUMEN-PERFUME */
 .resumen-perfume {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     background-color: rgba(255, 235, 236, 0.5);
     height: auto;
@@ -580,50 +579,101 @@ body {
 .resumen-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .resumen-content {
     display: flex;
-    gap: 40px;
+    gap: 60px;
     justify-content: center;
     align-items: center;
 }
 
 .resumen-mensaje {
     flex: 1;
-    max-width: 500px;
+    max-width: 550px;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     background-color: #fdf5f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(177, 64, 97, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(177, 64, 97, 0.15);
 }
 
 .resumen-mensaje h2 {
-    font-family: 'Ovo', serif;
-    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
     color: #291B2C;
-    margin-bottom: 25px;
-    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-style: italic;
+}
+
+/* Estilos para la nueva sección de nombre del perfume */
+.nombre-perfume-container {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px dashed #e0c1d2;
+}
+
+.instruccion-nombre {
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #5a3a4e;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.nombre-perfume-input {
+    width: 80%;
+    padding: 12px 15px;
+    border: 2px solid #e0c1d2;
+    border-radius: 6px;
+    font-family: 'Ovo', serif;
+    font-size: 16px;
+    color: #5a3a4e;
+    text-align: center;
+    transition: all 0.3s;
+    margin-bottom: 8px;
+}
+
+.nombre-perfume-input:focus {
+    border-color: #B14061;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(177, 64, 97, 0.2);
+}
+
+.limite-caracteres {
+    font-family: 'Ovo', serif;
+    font-size: 13px;
+    color: #B14061;
+    font-style: italic;
+    margin-top: 0;
 }
 
 .resumen-details {
     text-align: left;
-    margin-bottom: 25px;
+    margin: 30px 0;
+    padding: 0 20px;
 }
 
 .resumen-details p {
     font-family: 'Ovo', serif;
-    font-size: 16px;
+    font-size: 17px;
     color: #5a3a4e;
-    margin: 10px 0;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.resumen-details strong {
+    color: #291B2C;
 }
 
 .resumen-divider {
     height: 1px;
-    background-color: #e0c1d2;
-    margin: 25px 0;
+    background: linear-gradient(to right, transparent, #e0c1d2, transparent);
+    margin: 30px 0;
 }
 
 .resumen-total {
@@ -631,69 +681,72 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    padding: 0 20px;
 }
 
 .total-label {
-    font-family: 'Ovo', serif;
-    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
     color: #291B2C;
     font-weight: bold;
-    margin-top: -10px;
+    font-style: italic;
 }
 
 .total-price {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 28px;
     color: #B14061;
     font-weight: bold;
-    margin-top: -10px;
 }
 
 .resumen-buttons {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 0px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.editar-btn, .comprar-btn {
-    padding: 15px 30px;
-    border-radius: 4px;
+.editar-btn, .bolsa-btn {
+    padding: 16px 30px;
+    border-radius: 6px;
     font-family: 'Ovo', serif;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     transition: all 0.3s;
     flex: 1;
+    font-weight: bold;
 }
 
 .editar-btn {
     background-color: #fdf5f9;
-    border: 1px solid #B14061;
+    border: 2px solid #B14061;
     color: #B14061;
-    width: 30px;
 }
 
 .editar-btn:hover {
     background-color: #FFDFE9;
+    transform: translateY(-2px);
 }
 
-.comprar-btn {
+.bolsa-btn {
     background-color: #B14061;
-    border: 1px solid #B14061;
+    border: 2px solid #B14061;
     color: white;
 }
 
-.comprar-btn:hover {
-    background-color: #FFDFE9;
-    color: #5a3a4e;
+.bolsa-btn:hover {
+    background-color: #d1567a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(177, 64, 97, 0.3);
 }
 
 .resumen-footer {
-    font-family: 'Ovo', serif;
-    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
     color: #5a3a4e;
     font-style: italic;
-    margin-top: 15px;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
 }
 
 .resumen-imagen {
@@ -703,29 +756,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    height: 392px;
+    height: 500px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .resumen-imagen img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.resumen-imagen:hover img {
+    transform: scale(1.05);
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .resumen-content {
         flex-direction: column;
+        gap: 30px;
     }
     
     .resumen-mensaje, .resumen-imagen {
         max-width: 100%;
     }
     
+    .resumen-imagen {
+        height: 350px;
+    }
+    
     .resumen-buttons {
         flex-direction: column;
+    }
+    
+    .nombre-perfume-input {
+        width: 90%;
     }
 }
 
@@ -739,4 +807,14 @@ body {
     display: none;
     opacity: 0;
     transform: translateY(20px);
+}
+
+.color-muestra {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-left: 5px;
 }

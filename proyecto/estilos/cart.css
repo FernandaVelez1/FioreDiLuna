@@ -1,0 +1,160 @@
+/* Estilos del icono del carrito */
+.carrito-icon {
+  font-size: 1.5rem;
+  color: #333;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Overlay para fondo oscuro */
+.carrito-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Contenedor principal del carrito */
+.carrito-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cuando el carrito está abierto */
+.carrito-container.abierto {
+  right: 0;
+}
+
+.carrito-overlay.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Encabezado del carrito */
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.carrito-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cerrar-carrito {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Divisor */
+.carrito-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+/* Contenido del carrito */
+.carrito-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Estilos cuando el carrito está vacío */
+.carrito-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.carrito-vacio p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.btn-creacion {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-creacion:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .carrito-container {
+    width: 100%;
+  }
+}
+
+/* Barra de navegación (debe estar debajo del overlay pero sobre el contenido normal) */
+.navbar-estatica {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900; /* Menor que el overlay (998) y el carrito (999) */
+  background: white;
+  /* otros estilos de tu navbar */
+}
+
+/* Overlay para fondo oscuro (ajustado) */
+.carrito-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998; /* Mayor que la navbar pero menor que el carrito */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Contenedor del carrito (ajustado) */
+.carrito-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* El más alto de todos */
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}

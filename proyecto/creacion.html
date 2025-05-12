@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/navbar.css">
     <link rel="stylesheet" href="estilos/footer.css">
     <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="stylesheet" href="estilos/cart.css">
 
     <link rel="icon" type="image/png" href="imagenes/isotipo.png">
 
@@ -30,12 +31,35 @@
                 <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
                 <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
             </div>
-            <a href="#"><i class="bi bi-handbag"></i></a>
+            <a href="#" class="carrito-icon" id="carrito-icon"><i class="bi bi-handbag"></i></a>
+            
             <div class="nav-rights">
                 <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
             </div>
         </div> 
     </nav>
+
+    <!-- Bolsa de compras -->
+    <!-- Contenedor del carrito -->
+<div class="carrito-container" id="carrito-container">
+  <!-- Encabezado del carrito -->
+  <div class="carrito-header">
+    <h2>TU BOLSA</h2>
+    <button class="cerrar-carrito" id="cerrar-carrito">
+      <i class="bi bi-x"></i>
+    </button>
+  </div>
+  
+  <div class="carrito-divider"></div>
+  
+  <!-- Contenido del carrito -->
+  <div class="carrito-content">
+    <div class="carrito-vacio">
+      <p>Aún no has hecho ninguna creación</p>
+      <a href="creacion.html" class="btn-creacion">CREACIÓN DEL PERFUME</a>
+    </div>
+  </div>
+</div>
 
       <!-- Menú desplegable -->
    <div class="menu-overlay" id="menu-overlay">
@@ -160,8 +184,8 @@
             <div class="frase-container">
                 <label class="frase-label">Frase Personalizada:</label>
                 <p class="frase-nota">Escribe una frase especial que aparecerá grabada en tu envase. Por ejemplo: "Tu esencia, tu historia".</p>
-                <input type="text" class="frase-input" placeholder="Escribe tu frase aquí" maxlength="10">
-                <p class="frase-limite">Máximo 10 caracteres</p>
+                <input type="text" class="frase-input" placeholder="Escribe tu frase aquí" maxlength="20">
+                <p class="frase-limite">Máximo 20 caracteres</p>
             </div>
             
             <div class="precio-listo-container">
@@ -191,11 +215,23 @@
             <div class="resumen-mensaje">
                 <h2>¡Felicidades! Has creado un perfume único!</h2>
                 
+                <!-- Agregar esta nueva sección -->
+                <div class="nombre-perfume-container">
+                    <p class="instruccion-nombre">Ahora, dale un nombre único como tú:</p>
+                    <input type="text" class="nombre-perfume-input" placeholder="Escribe el nombre de tu perfume" maxlength="10">
+                    <p class="limite-caracteres">Máximo 10 caracteres</p>
+                </div>
+                <div class="resumen-details">
+    <!-- El contenido se actualizará dinámicamente -->
+</div>
+                <!--
                 <div class="resumen-details">
                     <p><strong>Aromas seleccionadas:</strong> Cítricas, florales y amaderadas.</p>
                     <p><strong>Envase:</strong> Rosa con tapón dorado</p>
                     <p><strong>Frase:</strong> 'Tu esencia, tu historia'.</p>
                 </div>
+
+            -->
                 
                 <div class="resumen-divider"></div>
                 
@@ -206,7 +242,7 @@
                 
                 <div class="resumen-buttons">
                     <button class="editar-btn">Volver a Editar</button>
-                    <button class="comprar-btn">Comprar Ahora</button>
+                    <button class="bolsa-btn">Guardar en la Bolsa</button>
                 </div>
             </div>
             
@@ -274,6 +310,7 @@
     <script src="scripts/menu.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/creacion.js"></script>
+    <script src="scripts/cart.js"></script>
 
 </body>
 </html>
