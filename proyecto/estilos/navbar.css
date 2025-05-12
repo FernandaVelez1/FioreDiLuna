@@ -153,12 +153,12 @@ body {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-color: #e0e0e0; /* Color de fondo */
+    background-color: #B14061; /* Color de fondo */
     border-radius: 50%;        /* Forma circular */
     text-align: center;
     line-height: 32px;         /* Centra verticalmente la letra */
     font-weight: bold;
-    color: #333;               /* Color del texto */
+    color: #ffffff;               /* Color del texto */
     text-decoration: none;
 }
 
@@ -178,7 +178,7 @@ body {
     z-index: 1;
     border-radius: 4px;
 }
-
+    /* cerrar sesion  */
 .dropdown-content a {
     color: #333;
     padding: 8px 12px;

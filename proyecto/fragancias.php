@@ -1,3 +1,8 @@
+<?php
+session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +53,7 @@
             <li><a href="index.php">Inicio</a></li>
             <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
             <li><a href="proceso.html">Crea tu perfume</a></li>
-            <li><a href="fragancias.html">Escencias</a></li>
+            <li><a href="fragancias.php">Escencias</a></li>
             <li><a href="frascos.html">Envases</a></li>
             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
         </ul>
