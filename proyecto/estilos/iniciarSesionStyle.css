@@ -173,8 +173,40 @@ form button:hover {
     color: #D395A7;
 }
 
+/* Puedes poner esto en iniciarSesionStyle.css y crearCuentaStyle.css */
+.input-password {
+    position: relative;
+    width: 103%;
+    margin-top: 15px; /* Igual que los otros inputs */
+}
 
+.input-password input[type="password"],
+.input-password input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    padding-right: 35px; /* Espacio para el ojito */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 0; /* Elimina margen extra */
+}
 
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #b14061;
+    font-size: 1.2em;
+    z-index: 2;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
 
 /* Estilos personalizados para SweetAlert */
 .swal-popup {

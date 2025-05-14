@@ -67,10 +67,10 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         </div>
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+            <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
             <li><a href="creacion.html">Crea tu perfume</a></li>
             <li><a href="fragancias.php">Escencias</a></li>
-            <li><a href="frascos.html">Envases</a></li>
+            <li><a href="frascos.php">Envases</a></li>
             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
         </ul>
         <div class="menu-footer">

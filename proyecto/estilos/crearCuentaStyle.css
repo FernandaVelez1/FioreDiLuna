@@ -74,6 +74,10 @@ input {
     margin-top: 107.5px;
 }
 
+.form-bloque-izquierda > * {
+    width: 100%;
+}
+
 /* Estilos para el contenedor del checklist */
 .contenedor {
     display: flex;
@@ -128,9 +132,43 @@ input {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
 }
 
+/* Centrado y tamaño uniforme para el campo de contraseña con ojito */
+.input-password {
+    position: relative;
+    margin-top: 5px; /* Cambiado de 15px a 5px */
+    width: 105% !important;
+    display: block;
+    /* Elimina padding/margin lateral si hay */
+}
 
+.input-password input[type="password"],
+.input-password input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    padding-right: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Ovo', serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 5px; /* <-- Agrega este margen */
+    
+}
 
-
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #b14061;
+    font-size: 1.2em;
+    z-index: 2;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
 
 /* Estilos SweetAlert personalizados - Tema Rosa Elegante */
 .swal2-popup {

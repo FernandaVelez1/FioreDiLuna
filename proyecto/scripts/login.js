@@ -88,6 +88,19 @@ $(document).ready(function() {
 
     // Redirigir al hacer clic en la "X"
     $('.bi-x').click(function() {
-        window.location.href = 'index.html'; 
+        window.location.href = 'index.php'; 
+    });
+
+    // Mostrar/ocultar contraseña con el ojito
+    $('.toggle-password').on('click', function() {
+        const input = $($(this).attr('toggle'));
+        const icon = $(this).find('i');
+        if (input.attr('type') === 'password') {
+            input.attr('type', 'text');
+            icon.removeClass('bi-eye-slash').addClass('bi-eye');
+        } else {
+            input.attr('type', 'password');
+            icon.removeClass('bi-eye').addClass('bi-eye-slash');
+        }
     });
 });

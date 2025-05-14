@@ -1,12 +1,17 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envases - Fiore Di Luna</title>
+    <link rel="stylesheet" href="estilos/navbar.css">
+    <link rel="stylesheet" href="estilos/footer.css">
+    <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="envasesStyle.css">
-    <link rel="icon" type="image/png" href="isotipo.png">
-
+    <link rel="icon" type="image/png" href="imagenes/isotipo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Ovo&display=swap" rel="stylesheet">
 </head>
@@ -14,20 +19,58 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="nav-left">
-            <a href="#"><i class="bi bi-list"></i></a>
+            <a href="#" id="menu-toggle"><i class="bi bi-list"></i></a>
         </div>
         <div class="nav-center">
-            <img src="isotipo.png" alt="Fiore di Luna Logo" class="logo">
+            <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo">
             <h1>FIORE DI LUNA</h1>
         </div>
         <div class="nav-right">
-            <a href="#"><i class="bi bi-search"></i></a>
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+                <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+            </div>
             <a href="#"><i class="bi bi-handbag"></i></a>
             <div class="nav-rights">
-                <a href="#"><i class="bi bi-person"></i></a>
+                <?php if (isset($_SESSION['user_name'])): ?>
+                    <div class="user-dropdown">
+                        <a href="#" class="user-name">
+                            <?= strtoupper(substr($_SESSION['user_name'], 0, 1)) ?>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="logout.php">Cerrar sesión</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+                <?php endif; ?>
+            </div>
+        </div> 
+    </nav>
+
+    <!-- Menú desplegable -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-container">
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <div class="menu-header">
+                <img src="imagenes/isotipo.png" alt="Fiore di Luna" class="menu-logo">
+                <p class="menu-slogan">FIORE DI LUNA</p>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
+                <li><a href="creacion.html">Crea tu perfume</a></li>
+                <li><a href="fragancias.php">Escencias</a></li>
+                <li><a href="frascos.php">Envases</a></li>
+                <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
+            </ul>
+            <div class="menu-footer">
+                <a href="#" class="accessibility-link">Donde la Luna y tu Esencia se Encuentran</a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Envases de 50mL -->
     <section class="envase1">
