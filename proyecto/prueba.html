@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proceso - Fiore Di Luna</title>
-    <link rel="stylesheet" href="estilos/procesoStyle.css">
+    <title>Creación - Fiore Di Luna</title>
+    <link rel="stylesheet" href="estilos/creacion.css">
 
     <link rel="stylesheet" href="estilos/navbar.css">
     <link rel="stylesheet" href="estilos/footer.css">
     <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="stylesheet" href="estilos/cart.css">
 
     <link rel="icon" type="image/png" href="imagenes/isotipo.png">
 
@@ -34,7 +35,7 @@
             <div class="nav-rights">
                 <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
             </div>
-        </div> 
+        </div>  
     </nav>
 
       <!-- Menú desplegable -->
@@ -70,9 +71,10 @@
     <!--  -->
 </section>
 
+<!-- Elegir Aromas -->
 <section class="elige-aromas">
     <div class="contenedor-titulo">
-        <!--  <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">  -->
+        <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
         <h1 class="titulo-seccion">Elige tus Aromas</h1>
     </div>  
     <div class="aromas-container">
@@ -80,19 +82,33 @@
             <div class="esencia-container">
                 <label class="esencia-label">Esencia:</label>
                 <select class="esencia-select">
-                    <option>Elixir de Rosas</option>
-                    <option>Esencia de Lavanda</option>
-                    <option>Jazmín Nocturno</option>
-                    <option>Vainilla Lunar</option>
+                    <option data-precio-base="1200" data-imagen="imagen1.png">CEREZA NEGRA</option>
+                    <option data-precio-base="1000" data-imagen="imagen2.png">CEREZA DULCE</option>
+                    <option data-precio-base="1500" data-imagen="imagen3.png">CEREZA AMBARINA</option>
+                    <option data-precio-base="1200" data-imagen="imagen4.png">OUD</option>
+                    <option data-precio-base="1000" data-imagen="imagen5.png">CEDRO</option>
+                    <option data-precio-base="1500" data-imagen="imagen6.png">SANDALO</option>
+                    <option data-precio-base="1500" data-imagen="imagen7.png">CANELA DULCE</option>
+                    <option data-precio-base="1300" data-imagen="imagen8.png">CANELA AMADERADA</option>
+                    <option data-precio-base="1200" data-imagen="imagen9.png">CANELA FLORAL</option>
+                    <option data-precio-base="1000" data-imagen="imagen11.png">LIMA</option>
+                    <option data-precio-base="1500" data-imagen="imagen12.png">NARANJA</option>
+                    <option data-precio-base="1300" data-imagen="imagen13.png">BERGAMOTA</option>
+                    <option data-precio-base="1200" data-imagen="imagen14.png">VAINILLA</option>
+                    <option data-precio-base="1000" data-imagen="imagen15.png">MIEL</option>
+                    <option data-precio-base="1500" data-imagen="imagen16.png">COCO</option>
+                    <option data-precio-base="1300" data-imagen="imagen17.png">ROSA</option> 
+                    <option data-precio-base="1500" data-imagen="imagen18.png">PEONÍA</option>
+                    <option data-precio-base="1300" data-imagen="imagen19.png">JAZMÍN</option>  
                 </select>
             </div>
             <div class="contenido-container">
                 <label class="contenido-label">Contenido:</label>
                 <div class="contenido-opciones">
-                    <button class="contenido-btn active">50 mL</button>
-                    <button class="contenido-btn">100 mL</button>
-                    <button class="contenido-btn">150 mL</button>
-                    <button class="contenido-btn">200 mL</button>
+                    <button class="contenido-btn active" data-ml="50">50 mL</button>
+                    <button class="contenido-btn" data-ml="100">100 mL</button>
+                    <button class="contenido-btn" data-ml="150">150 mL</button>
+                    <button class="contenido-btn" data-ml="200">200 mL</button>
                 </div>
             </div>
             <div class="intensidad-container">
@@ -108,25 +124,76 @@
             <div class="precio-agregar-container">
                 <div class="precio-container">
                     <label class="precio-label">Precio:</label>
-                    <span class="precio-valor">$ 1.620.00 Mex</span>
+                    <span class="precio-valor">$ 1,200.00 MXN</span>
                 </div>
                 <button class="agregar-btn">+ Añadir otro aroma</button>
             </div>
         </div>
         
         <div class="aromas-imagen">
-            <img src="imagenes/WhatsApp Image 2025-04-06 at 8.36.50 PM.jpeg" alt="Perfume seleccionado">
+            <img src="esencias/imagen1.png" alt="Elixir de Rosas">
         </div>
     </div>
     
-    <div class="notas-action-container">
-        <div class="notas-container">
-            <!-- <h3>Detalles de tu creación</h3> -->
-            <div class="notas-texto" id="notas-texto">
-                <!-- Aquí se agregará texto dinámicamente con JS -->
+    <div class="boton-siguiente-container">
+        <button class="siguiente-btn">Siguiente paso <i class="bi bi-arrow-right"></i></button>
+    </div>
+</section>
+
+<!-- PERSONALIZA ENVASE -->
+<section class="personaliza-envase">
+    <div class="contenedor-titulo">
+        <h1 class="titulo-seccion">Personaliza tu Envase</h1>
+        <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
+    </div>
+    
+    <div class="envase-container">
+        <div class="envase-imagen">
+            <img src="frascos/1.png" alt="Frasco Incanto di Rosa" id="envase-imagen">
+        </div>
+        
+        <div class="envase-form">
+            <div class="envase-seleccion">
+                <label class="envase-label">Envase:</label>
+                <select class="envase-select" id="envase-select">
+    <option data-imagen="1.png" data-precio="2100" data-colores="#FFD1DC,#F8C8DC,#FFECF5" data-ml="50">FRASCO ESENCIA PURA</option>
+    <option data-imagen="2.png" data-precio="1800" data-colores="#D1C68E,#E2BFE8,#F8CCD4" data-ml="50">FRASCO AURORA BOREAL</option>
+    <option data-imagen="11.png" data-precio="1900" data-colores="#F79DAB,#F1C2B1,#F1BBE3" data-ml="50">FRASCO MINIMALISTA ELEGANTE</option>
+    <option data-imagen="4.png" data-precio="2670" data-colores="#FFB6C1,#F1DCFF,#E5BA93" data-ml="100">FRASCO SERENIDAD CLÁSICA</option>
+    <option data-imagen="5.png" data-precio="2670" data-colores="#412610,#FAC25B,#FF9BB3" data-ml="100">FRASCO HARMONÍA LÍQUIDA</option>
+    <option data-imagen="6.png" data-precio="3210" data-colores="#FEAF85,#FAEBC4,#F8CCD4" data-ml="150">FRASCO VARIOUM ELEGANTE</option>
+    <option data-imagen="13.png" data-precio="3200" data-colores="#D5A077,#FFD9DA,#F3E1DD" data-ml="150">FRASCO DUALIDAD BRILLANTE</option>
+    <option data-imagen="8.png" data-precio="3450" data-colores="#FFECED,#F8C8DC,#F8CCD4" data-ml="200">FRASCO LUJO ATEMPORAL</option>
+    <option data-imagen="9.png" data-precio="3600" data-colores="#D0B76A,#E2BFE8,#FFB6C1" data-ml="200">FRASCO REFLEJO DE ÓPALO</option>
+</select>
+            </div>
+            
+            <div class="color-container">
+                <label class="color-label">Color:</label>
+                <div class="colores-opciones" id="colores-opciones">
+                    <!-- Los colores se generarán dinámicamente con JS -->
+                </div>
+            </div>
+            
+            <div class="frase-container">
+                <label class="frase-label">Frase Personalizada:</label>
+                <p class="frase-nota">Escribe una frase especial que aparecerá grabada en tu envase. Por ejemplo: "Tu esencia, tu historia".</p>
+                <input type="text" class="frase-input" placeholder="Escribe tu frase aquí" maxlength="20">
+                <p class="frase-limite">Máximo 20 caracteres</p>
+            </div>
+            
+            <div class="precio-listo-container">
+                <div class="precio-container">
+                    <label class="precio-label">Precio:</label>
+                    <span class="precio-valor" id="precio-envase">$500.00 MXN</span>
+                </div>
             </div>
         </div>
-        <button class="siguiente-btn">Siguiente paso <i class="bi bi-arrow-right"></i></button>
+    </div>
+    
+    <div class="botones-navegacion">
+        <button class="regresar-btn"><i class="bi bi-arrow-left"></i> Regresar</button>
+        <button class="finalizar-btn">Tu Obra Maestra <i class="bi bi-arrow-right"></i></button>
     </div>
 </section>
 
@@ -142,11 +209,23 @@
             <div class="resumen-mensaje">
                 <h2>¡Felicidades! Has creado un perfume único!</h2>
                 
+                <!-- Agregar esta nueva sección -->
+                <div class="nombre-perfume-container">
+                    <p class="instruccion-nombre">Ahora, dale un nombre único como tú:</p>
+                    <input type="text" class="nombre-perfume-input" placeholder="Escribe el nombre de tu perfume" maxlength="10">
+                    <p class="limite-caracteres">Máximo 10 caracteres</p>
+                </div>
+                <div class="resumen-details">
+    <!-- El contenido se actualizará dinámicamente -->
+</div>
+                <!--
                 <div class="resumen-details">
                     <p><strong>Aromas seleccionadas:</strong> Cítricas, florales y amaderadas.</p>
                     <p><strong>Envase:</strong> Rosa con tapón dorado</p>
                     <p><strong>Frase:</strong> 'Tu esencia, tu historia'.</p>
                 </div>
+
+            -->
                 
                 <div class="resumen-divider"></div>
                 
@@ -157,16 +236,19 @@
                 
                 <div class="resumen-buttons">
                     <button class="editar-btn">Volver a Editar</button>
-                    <button class="comprar-btn">Comprar Ahora</button>
+                    <button class="bolsa-btn">Guardar en la Bolsa</button>
                 </div>
             </div>
             
             <div class="resumen-imagen">
-                <img src="imagenes/WhatsApp Image 2025-02-16 at 2.13.58 PM.jpeg" alt="Perfume personalizado">
+                <img src="imagenes/regalo1.jpg" alt="Perfume personalizado">
             </div>
         </div>
     </div>
     <p class="resumen-footer">Tu perfume personalizado está listo para ser tuyo</p>
+<div class="creacion-btn-container">
+    <button class="creacion-btn">Crear nuevo perfume</button>
+</div>
 </section>
 
     <footer>
@@ -224,7 +306,8 @@
 
     <script src="scripts/menu.js"></script>
     <script src="scripts/search.js"></script>
-    <script src="scripts/proceso.js"></script>
+    <script src="scripts/creacion.js"></script>
+    <script src="scripts/cart.js"></script>
 
 </body>
 </html>
