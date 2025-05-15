@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function actualizarResumen(aromas, envase, color, frase) {
         const resumenDetails = document.querySelector('.resumen-details');
-        const totalPrice = document.querySelector('.total-price');
+        const totalPrice = document.querySelector('.total-price1');
         
         let aromasHTML = aromas.map((aroma, index) => 
             `<div class="resumen-item">
@@ -534,4 +534,62 @@ document.addEventListener('DOMContentLoaded', function() {
     inicializarSeccionAromas(seccionAromasOriginal, true);
     manejarBotonAgregar();
     manejarSeleccionEnvase();
+
+    // Función para preparar el item del carrito
+function prepararItemParaCarrito() {
+    const nombrePerfume = document.querySelector('.nombre-perfume-input').value || 'Perfume Personalizado';
+    const aromas = obtenerAromasSeleccionados();
+    const envase = obtenerEnvaseSeleccionado();
+    const color = obtenerColorSeleccionado();
+    const frase = obtenerFrasePersonalizada();
+    
+    // Calcular precio total
+    const precioTotal = aromas.reduce((sum, aroma) => sum + aroma.precio, 0) + envase.precio;
+    
+    // Crear descripción detallada
+    let descripcion = 'Aromas: ';
+    descripcion += aromas.map((aroma, index) => 
+        `${aroma.nombre} (${aroma.contenido}, Intensidad ${aroma.intensidad}/5)`
+    ).join(' + ');
+    
+    descripcion += ` | Envase: ${envase.nombre} (${envase.ml}ml)`;
+    if (color) descripcion += `, Color: ${color}`;
+    if (frase) descripcion += ` | Frase: "${frase}"`;
+    
+    return {
+        id: 'perfume-' + Date.now(), // ID único
+        name: nombrePerfume,
+        description: descripcion,
+        price: precioTotal,
+        quantity: 1,
+        image: envase.nombre.includes('Incanto') ? 'frascos/1.png' : 'frascos/2.png' // Ejemplo, ajusta según tus imágenes
+    };
+}
+
+// Event listener para el botón "Guardar en la Bolsa"
+document.querySelector('.bolsa-btn')?.addEventListener('click', function() {
+    const nombreInput = document.querySelector('.nombre-perfume-input');
+    const nombrePerfume = nombreInput.value.trim();
+    
+    // Validación más estricta
+    if (!nombrePerfume || nombrePerfume.length < 2) {
+        alert('Por favor, asigna un nombre único a tu perfume');
+        nombreInput.focus();
+        nombreInput.style.border = '1px solid red'; // Resaltar campo inválido
+        setTimeout(() => {
+            nombreInput.style.border = ''; // Quitar resaltado después de 2 segundos
+        }, 2000);
+        return; // Esto detiene la ejecución, no llegará a addToCart
+    }
+    
+    const perfumeItem = prepararItemParaCarrito();
+    addToCart(perfumeItem);
+    
+    // Mostrar mensaje de confirmación estilizado
+    confirmationMessage.style.display = 'block';
+    setTimeout(() => {
+        confirmationMessage.style.display = 'none';
+    }, 3000);
+});
+
 });

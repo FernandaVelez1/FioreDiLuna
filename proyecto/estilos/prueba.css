@@ -705,6 +705,13 @@ body {
     font-weight: bold;
 }
 
+.total-price1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #B14061;
+    font-weight: bold;
+}
+
 .resumen-buttons {
     display: flex;
     justify-content: space-between;
@@ -753,7 +760,7 @@ body {
     font-size: 22px;
     color: #5a3a4e;
     font-style: italic;
-    margin-top: -15px;
+    margin-top: -5px;
     letter-spacing: 0.5px;
 }
 
