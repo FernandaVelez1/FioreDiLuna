@@ -48,16 +48,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             checkoutBtn.disabled = true;
-            updateSummary(0);
+            cartSummary.style.display = 'none'; // Ocultar resumen cuando el carrito está vacío
             return;
         }
         
+        // Mostrar resumen si hay productos
+        cartSummary.style.display = 'block';
         cartItemsContainer.innerHTML = '';
         
         cart.forEach((item, index) => {
             // Extraer el color del texto de descripción
             let colorSquare = '';
-            const colorMatch = item.description.match(/Color: (#[0-9A-Fa-f]{6})/);
+            console.log('Item:', item);
+            const colorMatch = item.description?.match(/Color: (#[0-9A-Fa-f]{6})/);
             if (colorMatch && colorMatch[1]) {
                 colorSquare = `<span class="color-square" style="background-color: ${colorMatch[1]};"></span>`;
             }
@@ -148,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const index = e.target.getAttribute('data-index');
         cart.splice(index, 1);
         saveCart();
-        renderCart();
+        renderCart(); // Esto automáticamente manejará la visibilidad del resumen
     }
     
     // Guardar carrito en localStorage

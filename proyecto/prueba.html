@@ -16,8 +16,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Ovo&display=swap" rel="stylesheet">
+    <!-- PAYPAL -->
+    
+<script src="https://www.paypal.com/sdk/js?client-id=AXpnYQmWUFOCDEObNqNKMasC70TJjCIm5h2Pr-9UWicpg9fNpgzelQKHfl7n26yjFMF9EbIDCXj3n9jC"></script>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AUN4Vyr4H8IYUcc0VL2jn7MGuD48p3GLbFVZfUkk8g_0euLdpl5sk4VymbksnsnDMFimSZovkIy5Bi8j"></script>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -96,6 +98,40 @@
                 <span class="total-price">$0.00 MXN</span>
             </div>
             <button class="checkout-btn" disabled>PROCEDER AL PAGO</button>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Pago -->
+<div class="cart-overlay" id="payment-overlay">
+    <div class="cart-container">
+        <button class="close-cart" id="close-payment">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="cart-header">
+            <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo2">
+            <h2>MÉTODOS DE PAGO</h2>
+        </div>
+        <div class="cart-items" id="payment-items">
+            <!-- Contenido de información de pago -->
+            <div class="payment-info">
+                <img src="imagenes/una joven de 25 años abriendo un regalo, adentro del regalo esta un perfume Fiore Di Luna, la joven se ve emocionada.jpg" alt="Pago seguro" class="payment-image">
+                <p class="payment-text">MÁS CERCA DE TU CREACIÓN</p>
+            </div>
+        </div>
+        <div class="cart-summary" id="payment-summary">
+            <div class="summary-row total">
+                <span>Total a pagar</span>
+                <span class="total-price">$0.00 MXN</span>
+            </div>
+            
+            <!-- Botones de PayPal -->
+            <div id="paypal-button-container"></div>
+            
+            <!-- Botón para regresar al carrito -->
+            <button class="back-to-cart-btn" id="back-to-cart">
+                <i class="bi bi-arrow-left"></i> REGRESAR A TU BOLSA DE COMPRAS
+            </button>
         </div>
     </div>
 </div>
