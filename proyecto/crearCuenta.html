@@ -52,10 +52,10 @@
         </div>
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-            <li><a href="proceso.html">Crea tu perfume</a></li>
-            <li><a href="fragancias.html">Escencias</a></li>
-            <li><a href="frascos.html">Envases</a></li>
+            <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
+            <li><a href="proceso.php">Crea tu perfume</a></li>
+            <li><a href="fragancias.php">Escencias</a></li>
+            <li><a href="frascos.php">Envases</a></li>
             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
         </ul>
         <div class="menu-footer">
@@ -78,8 +78,12 @@
                 <input type="email" id="correo" name="correo" placeholder="" required onkeyup="verificarCorreoBD($('#correo').val());">
                 <span id="mensaje-error-correo" class="mensaje-error"></span>
                 <label>Contraseña</label>
-                <input type="password" id="contrasenia" name="contrasenia" placeholder="" required 
-                       onkeyup="validarContrasenia()">
+                <div class="input-password">
+                    <input type="password" id="contrasenia" name="contrasenia" placeholder="Contraseña" required>
+                    <span class="toggle-password" toggle="#contrasenia">
+                        <i class="bi bi-eye-slash"></i>
+                    </span>
+                </div>
                 <div id="requisitos-contrasenia" class="bloqueS1" style="display: flex; flex-wrap: wrap; gap: 10px; margin: 5px 0;">
                     <span id="req-longitud">✓ 8+ caracteres</span>
                     <span id="req-mayuscula">✓ Mayúscula</span>
@@ -94,8 +98,13 @@
                 <label>Fecha de Nacimiento</label>
                 <input type="date" id="fecha_nac" name="fecha_nac" required>
                 <label>Confirmar Contraseña</label>
-                <input type="password" id="confirmar_contrasenia" placeholder="" required 
-                       onkeyup="validarConfirmacionContrasenia()">
+                <div class="input-password">
+                    <input type="password" id="confirmar_contrasenia" placeholder="" required 
+                           onkeyup="validarConfirmacionContrasenia()">
+                    <span class="toggle-password" toggle="#confirmar_contrasenia">
+                        <i class="bi bi-eye-slash"></i>
+                    </span>
+                </div>
                 <span id="mensaje-error-confirmacion" class="mensaje-error"></span>
                 <div class="contenedor">
                     <input type="checkbox" class="checklist" id="privacidad" required>

@@ -31,7 +31,12 @@
                 <p>Para acceder a su cuenta</p>
                 <form id="formularioLogin" method="POST" action="login.php">
                     <input type="email" name="correo" id="correo" placeholder="Correo" required>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required>
+                    <div class="input-password">
+                        <input type="password" id="contrasenia" name="contrasenia" placeholder="Contraseña">
+                        <span class="toggle-password" toggle="#contrasenia">
+                            <i class="bi bi-eye-slash"></i>
+                        </span>
+                    </div>
                     <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                     <button type="submit">Iniciar Sesión</button>
                 </form>

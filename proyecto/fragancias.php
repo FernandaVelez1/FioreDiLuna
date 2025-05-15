@@ -34,7 +34,18 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
             </div>
             <a href="#"><i class="bi bi-handbag"></i></a>
             <div class="nav-rights">
-                <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+                <?php if (isset($_SESSION['user_name'])): ?>
+                    <div class="user-dropdown">
+                        <a href="#" class="user-name">
+                            <?= strtoupper(substr($_SESSION['user_name'], 0, 1)) ?>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="logout.php">Cerrar sesión</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+                <?php endif; ?>
             </div>
         </div> 
     </nav>
@@ -51,10 +62,10 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         </div>
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+            <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
             <li><a href="proceso.html">Crea tu perfume</a></li>
             <li><a href="fragancias.php">Escencias</a></li>
-            <li><a href="frascos.html">Envases</a></li>
+            <li><a href="frascos.php">Envases</a></li>
             <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
         </ul>
         <div class="menu-footer">
@@ -146,7 +157,7 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         <div class="escencia-container">
             <div class="escencia">
                 <img src="esencias/imagen11.png" alt="Lima">
-                <p>LIMA<br>Una fragancia fresca, ligera y muy energizante, con un toque de dulzura que se mezcla perfectamente con su acidez, proporcionando una sensación de frescura intensa y claridad.</p>
+                <p>LIMA<br>Una fragancia fresca, ligera y muy energizante, con un toque de dulzura que se mezcla perfectamente con su acidez, proporcionando una sensación de frescura.</p>
             </div>
             <div class="escencia">
                 <img src="esencias/imagen12.png" alt="Naranja">

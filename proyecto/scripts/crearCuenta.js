@@ -1,5 +1,4 @@
-
-    // Configuración del tema rosa elegante para SweetAlert
+// Configuración del tema rosa elegante para SweetAlert
     const swalRosa = Swal.mixin({
         background: '#fff5f7',
         color: '#5a2a40',
@@ -191,4 +190,18 @@
                 }
             });
         });
+
+        // Mostrar/ocultar contraseña con el ojito
+        $('.toggle-password').on('click', function() {
+            const input = $($(this).attr('toggle'));
+            const icon = $(this).find('i');
+            if (input.attr('type') === 'password') {
+                input.attr('type', 'text');
+                icon.removeClass('bi-eye-slash').addClass('bi-eye');
+            } else {
+                input.attr('type', 'password');
+                icon.removeClass('bi-eye').addClass('bi-eye-slash');
+            }
+        });
     });
+

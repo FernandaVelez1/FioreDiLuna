@@ -14,12 +14,14 @@ $insertar = "INSERT INTO registros (nombre, apellido, fecha_nac, contrasenia, es
              VALUES ('$nombre', '$apellido', '$fecha_nac', '$contrasenia', '$estado', '$correo')";
 
 // Ejecutar consulta
-if (mysqli_query($conexion, $insertar)) {
+$registro_exitoso = mysqli_query($conexion, $insertar);
+
+if ($registro_exitoso) {
+    session_start();
+    $_SESSION['user_name'] = $nombre; // O el campo que uses para mostrar la inicial
     echo "EXITO!";
 } else {
-    echo "Hubo un error: " . mysqli_error($conexion);
+    echo "Error al registrar usuario";
 }
-
-
 
 ?>
