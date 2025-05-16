@@ -1,3 +1,6 @@
+<?php
+session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Ovo&display=swap" rel="stylesheet">
     <!-- PAYPAL -->
     
-<script src="https://www.paypal.com/sdk/js?client-id=AXpnYQmWUFOCDEObNqNKMasC70TJjCIm5h2Pr-9UWicpg9fNpgzelQKHfl7n26yjFMF9EbIDCXj3n9jC"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AXpnYQmWUFOCDEObNqNKMasC70TJjCIm5h2Pr-9UWicpg9fNpgzelQKHfl7n26yjFMF9EbIDCXj3n9jC&currency=MXN"></script>
 
 </head>
 <body>
@@ -38,7 +41,18 @@
             </div>
             <a href="#"><i class="bi bi-handbag"></i></a>
             <div class="nav-rights">
-                <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+                <?php if (isset($_SESSION['user_name'])): ?>
+                    <div class="user-dropdown">
+                        <a href="#" class="user-name">
+                            <?= strtoupper(substr($_SESSION['user_name'], 0, 1)) ?>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="logout.php">Cerrar sesión</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <a href="iniciarSesion.html"><i class="bi bi-person"></i></a>
+                <?php endif; ?>
             </div>
         </div>  
     </nav>
@@ -55,11 +69,10 @@
         </div>
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-            <li><a href="proceso.html">Crea tu perfume</a></li>
-            <li><a href="fragancias.html">Escencias</a></li>
-            <li><a href="frascos.html">Envases</a></li>
-            <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
+            <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
+            <li><a href="fragancias.php">Escencias</a></li>
+            <li><a href="frascos.php">Envases</a></li>
+            <li><a href="prueba.php">Nuestras creaciones</a></li>
         </ul>
         <div class="menu-footer">
             <a href="#" class="accessibility-link">Donde la Luna y tu Esencia se Encuentran</a>
@@ -81,7 +94,7 @@
             <!-- Los items del carrito se agregarán dinámicamente aquí -->
             <div class="empty-cart">
                 <p>Tu bolsa de compras está vacía</p>
-                <a href="prueba.html" class="start-creating-btn" id="start-creating-btn">Comenzar a crear</a>
+                <a href="prueba.php" class="start-creating-btn" id="start-creating-btn">Comenzar a crear</a>
             </div>
         </div>
         <div class="cart-summary" id="cart-summary">

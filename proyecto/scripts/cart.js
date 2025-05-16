@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cartItemsContainer.innerHTML = `
                 <div class="empty-cart">
                     <p>Tu bolsa de compras está vacía</p>
-                    <a href="prueba.html" class="start-creating-btn">Comenzar a crear</a>
+                    <a href="prueba.php" class="start-creating-btn">Comenzar a crear</a>
                 </div>
             `;
             checkoutBtn.disabled = true;
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Mostrar mensaje y luego redirigir
         showAddToCartConfirmation(() => {
-            window.location.href = 'prueba.html';
+            window.location.href = 'prueba.php';
         });
     };
     

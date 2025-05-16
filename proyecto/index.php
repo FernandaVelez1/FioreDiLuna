@@ -14,12 +14,16 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
     <link rel="stylesheet" href="estilos/navbar.css">
     <link rel="stylesheet" href="estilos/footer.css">
     <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="stylesheet" href="estilos/cart.css">
+     <link rel="stylesheet" href="estilos/paypal.css">
 
     <link rel="icon" type="image/png" href="imagenes/isotipo.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Ovo&display=swap" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=AXpnYQmWUFOCDEObNqNKMasC70TJjCIm5h2Pr-9UWicpg9fNpgzelQKHfl7n26yjFMF9EbIDCXj3n9jC&currency=MXN"></script>
 </head>
+
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar">
@@ -68,10 +72,9 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         <ul class="menu-items">
             <li><a href="index.php">Inicio</a></li>
             <li><a href="sobreNosotros.php">Sobre nosotros</a></li>
-            <li><a href="creacion.html">Crea tu perfume</a></li>
             <li><a href="fragancias.php">Escencias</a></li>
             <li><a href="frascos.php">Envases</a></li>
-            <li><a href="nuestras-creaciones.html">Nuestras creaciones</a></li>
+            <li><a href="prueba.php">Nuestras creaciones</a></li>
         </ul>
         <div class="menu-footer">
             <a href="#" class="accessibility-link">Donde la Luna y tu Esencia se Encuentran</a>
@@ -211,6 +214,73 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
         <p class="parrafo-section">Cada fragancia cuenta una historia. ¿Cuál será la tuya?</p>
     </section>
 
+    <!-- Carrito de compras -->
+<div class="cart-overlay" id="cart-overlay">
+    <div class="cart-container">
+        <button class="close-cart" id="close-cart">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="cart-header">
+            <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo2">
+            <h2>TU BOLSA DE COMPRAS</h2>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los items del carrito se agregarán dinámicamente aquí -->
+            <div class="empty-cart">
+                <p>Tu bolsa de compras está vacía</p>
+                <a href="prueba.php" class="start-creating-btn" id="start-creating-btn">Comenzar a crear</a>
+            </div>
+        </div>
+        <div class="cart-summary" id="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span class="subtotal">$0.00 MXN</span>
+            </div>
+            <div class="summary-row">
+                <span>Envío</span>
+                <span class="shipping">Calculado al finalizar</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span class="total-price">$0.00 MXN</span>
+            </div>
+            <button class="checkout-btn" disabled>PROCEDER AL PAGO</button>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Pago -->
+<div class="cart-overlay" id="payment-overlay">
+    <div class="cart-container">
+        <button class="close-cart" id="close-payment">
+            <i class="bi bi-x"></i>
+        </button>
+        <div class="cart-header">
+            <img src="imagenes/isotipo.png" alt="Fiore di Luna Logo" class="logo2">
+            <h2>MÉTODOS DE PAGO</h2>
+        </div>
+        <div class="cart-items" id="payment-items">
+            <!-- Contenido de información de pago -->
+            <div class="payment-info">
+                <img src="imagenes/una joven de 25 años abriendo un regalo, adentro del regalo esta un perfume Fiore Di Luna, la joven se ve emocionada.jpg" alt="Pago seguro" class="payment-image">
+                <p class="payment-text">MÁS CERCA DE TU CREACIÓN</p>
+            </div>
+        </div>
+        <div class="cart-summary" id="payment-summary">
+            <div class="summary-row total">
+                <span>Total a pagar</span>
+                <span class="total-price">$0.00 MXN</span>
+            </div>
+            <!-- Botones de PayPal -->
+            <div id="paypal-button-container"></div>
+            <!-- Botón para regresar al carrito -->
+            <button class="back-to-cart-btn" id="back-to-cart">
+                <i class="bi bi-arrow-left"></i> REGRESAR A TU BOLSA DE COMPRAS
+            </button>
+        </div>
+    </div>
+</div>
+
     <footer>
         <div class="foot-titulo">
             <img src="imagenes/isotipo.png" alt="Isotipo" class="isotipo">
@@ -266,5 +336,7 @@ session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
 
     <script src="scripts/menu.js"></script>
     <script src="scripts/search.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/paypal.js"></script>
 </body>
 </html>
