@@ -1,5 +1,8 @@
 <?php
-session_start(); // ESTO DEBE IR EN LA PRIMERA LÍNEA DEL ARCHIVO
+session_start(); // Esto debe ir primero
+require_once __DIR__ . '/routes.php';
+// Si routes.php maneja la petición, debe hacer exit;
+// Solo si no es una ruta API, sigue el HTML:
 ?>
 
 
